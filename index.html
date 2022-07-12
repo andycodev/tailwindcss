@@ -11,9 +11,9 @@
 <body>
     <div id="app" class="bg-white">
         <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Estilos Textos</h2>
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Componentes</h2>
             <p class="text-gray-400"> Trabanjando ...</p>
-            <!-- <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
                 <div v-for="componente in componentes" :key="componente.id" class="group relative">
                     <div class="mt-4 flex justify-between bg-gray-200 p-5 rounded-lg">
                         <p class="text-sm font-medium text-gray-900">{{ componente.name }}</p>
@@ -22,39 +22,17 @@
                                 <a :href="componente.ruta" target="_blank"
                                     class="bg-blue-500 p-2 text-white rounded-full">
                                     <span aria-hidden="true" class="absolute inset-0"></span>
-                                    visualizar
+                                    Ver más ejemplos
                                 </a>
                             </h3>
                         </div>
                     </div>
-                </div>
-            </div> -->
-        </div>
-        <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Componentes</h2>
-            <p class="text-gray-400"> Trabanjando ...</p>
-            <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                <div v-for="componente in componentes" :key="componente.id" class="group relative">
-                    <div class="mt-4 flex justify-between bg-gray-200 p-5 rounded-lg">
-                        <p class="text-sm font-medium text-gray-900">{{ componente.name }}</p>
-                        <div>
-                            <h3 class="text-sm text-gray-700">
-                                <a :href="componente.ruta" target="_blank"
-                                    class="bg-blue-500 p-2 text-white rounded-full">
-                                    <span aria-hidden="true" class="absolute inset-0"></span>
-                                    visualizar
-                                </a>
-                            </h3>
-                        </div>
+                    <div class="container mx-auto mt-5">
+                        <iframe :src="componente.ruta" class="w-full h-auto" :title="componente.name"></iframe>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Sistema de grillas</h2>
-            <p class="text-gray-400"> Trabanjando ...</p>
-        </div>
+        </div>       
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script>
@@ -66,28 +44,25 @@
                         {
                             id: 1,
                             name: 'Buttons',
-                            img: 'assets/app-registra.png',
-                            ruta: 'maquetas/app-registra.html'
+                            ruta: 'componentes/buttons.html'
                         },
                         {
                             id: 2,
                             name: 'Cards',
-                            img: 'assets/app-registra.png',
-                            ruta: 'maquetas/app-registra.html'
+                            ruta: 'componentes/cards.html'
                         },
                         {
                             id: 3,
                             name: 'Modals',
-                            img: 'assets/app-registra.png',
-                            ruta: 'maquetas/app-registra.html'
+                            ruta: 'componentes/modals.html'
                         },
                         {
                             id: 4,
                             name: 'Tabs',
-                            img: 'assets/app-registra.png',
-                            ruta: 'maquetas/app-registra.html'
+                            ruta: 'componentes/tabs.html'
                         },
-                    ]
+                    ],
+                  
                 }
             }
         })
